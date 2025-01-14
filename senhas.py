@@ -1,10 +1,11 @@
 import random
 import string
 import json
-while True:
-    print("coloque a quantidade de letras,numeros e caract. especiais que voce quer \n")
-    val= int(input("qntd de letras"))
-    def gerar(strings:str ,ints:str,caracter:str)->str:
+
+error_msg:str = "valor inserido incorreto \n"
+
+def gerar(strings:str ,ints:str,caracter:str)->str:
+        
         numeros:list =list(string.digits)
         letras:list = list(string.ascii_letters)
         caracteres:list = list(string.punctuation)
@@ -12,7 +13,8 @@ while True:
         random.shuffle(numeros)
         random.shuffle(caracteres)
         random.shuffle(letras)
-        
+
+        #convertendo para string
         numeros_string:str = "".join(map(str,numeros))
         caracteres_string:str = "".join(caracteres)
         letras_string:str = "".join(letras)
@@ -27,6 +29,15 @@ while True:
 
         return senha_gerada
 
-
-
-print(gerar(4,7,4))
+while True:
+    print("coloque a quantidade de letras,numeros e caract. especiais que voce quer \n")
+    try:
+        letras_qntd= int(input("qntd de letras: "))
+        numeros_qntd= int(input("qntd de numeros: "))
+        caracteres_qntd= int(input("qntd de caract. especiais: "))
+    except ValueError:
+        print(error_msg)
+        continue
+    print(gerar(letras_qntd,numeros_qntd,caracteres_qntd))
+    
+    break;
