@@ -19,17 +19,20 @@ def gerar(strings:str ,ints:str,caracter:str)->str:
         caracteres_string:str = "".join(caracteres)
         letras_string:str = "".join(letras)
 
+        # Concatenação das strings
         senha_lista:list = list(numeros_string[:ints]+ letras_string[:strings] + caracteres_string[:caracter] )
         random.shuffle(senha_lista)
+        
+        #senha gerada 
         senha_gerada:str = "".join(senha_lista)
-
+        #criacao de arquivo json para visualizar o historico de senhas(nao seguro)
         logs:dict= {"senha": senha_gerada}
         with open("senhas.json","a") as f:
             f.write(json.dumps(logs) + "\n")
-
         return senha_gerada
 
 while True:
+    print(80 * "-")
     print("coloque a quantidade de letras,numeros e caract. especiais que voce quer \n")
     try:
         letras_qntd= int(input("qntd de letras: "))
