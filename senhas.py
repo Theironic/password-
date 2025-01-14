@@ -26,14 +26,17 @@ def gerar(strings:str ,ints:str,caracter:str)->str:
         #senha gerada 
         senha_gerada:str = "".join(senha_lista)
         #criacao de arquivo json para visualizar o historico de senhas(nao seguro)
-        logs:dict= {"senha": senha_gerada}
+        logs:dict= {"senha": senha_gerada,
+                    "nome": nome_senha}
         with open("senhas.json","a") as f:
             f.write(json.dumps(logs) + "\n")
         return senha_gerada
 
+# menu 
 while True:
     print(80 * "-")
     print("coloque a quantidade de letras,numeros e caract. especiais que voce quer \n")
+    nome_senha:str = input("qual nome de sua senha ? ")
     try:
         letras_qntd= int(input("qntd de letras: "))
         numeros_qntd= int(input("qntd de numeros: "))
