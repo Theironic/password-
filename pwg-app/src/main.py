@@ -6,7 +6,7 @@ ElevatedButton = NewType("ElevatedButton", str)
 Text = NewType("Text",str)
 
 #variaveis de interface
-qntd_input: TextField= ft.TextField("numeros")
+qntd_input: TextField= ft.TextField("", label="numeros")
 btn_gera: ElevatedButton = ft.ElevatedButton("gerar senha")
 main_texto: Text = ft.Text("hello world",size=50,color="#003F91",font_family="Courier")
 
