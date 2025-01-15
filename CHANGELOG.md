@@ -23,3 +23,9 @@ poucas mudancas feitas, projeto teve basicamente zero melhorias.
 ### added
 - version stable created
 - ready-made base application
+
+### [v1.5.0 not stable]
+### added
+- Flet was chosen as the front end
+- base interface with FLET not funcional
+- requirements.txt
