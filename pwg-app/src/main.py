@@ -1,25 +1,29 @@
+
 import flet as ft
+import typing
+
+qntd_input = ft.TextField("numeros")
+btn_gera = ft.ElevatedButton("gerar senha")
+main_texto= ft.Text("hello world",size=50,color="#003F91",font_family="Courier")
+
 
 
 def main(page: ft.Page):
-    counter = ft.Text("0", size=50, data=0)
-
-    def increment_click(e):
-        counter.data += 1
-        counter.value = str(counter.data)
-        counter.update()
-
-    page.floating_action_button = ft.FloatingActionButton(
-        icon=ft.Icons.ADD, on_click=increment_click
-    )
+    def btn_gerar(e)->None:
+        
+        pass
     page.add(
-        ft.SafeArea(
-            ft.Container(
-                counter,
-                alignment=ft.alignment.center,
-            ),
-            expand=True,
+        ft.Column(
+            [   #linha comeca aqui
+                main_texto,
+                qntd_input,
+                btn_gera
+                
+                
+            ]
+            
         )
+
     )
 
 
