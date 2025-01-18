@@ -3,17 +3,45 @@
 
 create software that generates a strong password and the created password can be viewed in a history.
 
-## future improvements🧠
-dramatically increase software security using encryption.
-creation of the software front end.
-
 
 ## requirements 🧑🏻‍💻
 - python 3
 - python libs(string,json,random)
+- Flet
 
-## how run the project 🪪
-Simply run the command
-use anyone terminal.
 
-```python -u senhas.py```
+## setup the project
+you will need to create a venv
+the command:
+Linux:
+```` 
+python -m venv .venv 
+````
+active in terminal:
+```` 
+source .venv/bin/activate
+````
+Windows:
+
+```` 
+python -m venv .venv 
+````
+CMD:
+```` 
+.\.venv\Scripts\Activate
+````
+### OR
+
+Powershell:
+```` 
+.\.venv\Scripts\Activate.ps1
+````
+finally use:
+
+```` 
+pip install -r requirements.txt
+````
+# run the project
+
+
+
