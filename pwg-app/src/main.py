@@ -7,8 +7,12 @@ Text = NewType("Text",str)
 
 #variaveis de interface
 qntd_input: TextField= ft.TextField("", label="numeros")
-btn_gera: ElevatedButton = ft.ElevatedButton("gerar senha")
-main_texto: Text = ft.Text("hello world",size=50,color="#003F91",font_family="Courier")
+btn_gera: ElevatedButton = ft.ElevatedButton("Gerar Senha")
+
+main_texto: Text = ft.Text("Password Generator",size=50,color="#003F91",font_family="Courier")
+
+
+
 
 
 # main interface
@@ -24,8 +28,9 @@ def main(page: ft.Page):
                 btn_gera
                 
                 
-            ]
-            
+            ],
+            alignment=ft.MainAxisAlignment.CENTER,  
+            horizontal_alignment=ft.CrossAxisAlignment.CENTER
         )
 
     )
